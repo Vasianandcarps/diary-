@@ -8,11 +8,21 @@ function Record(date,recording){
 function Diary(){
     this.diary = [] ;
     this.showDiary = function (){
-        this.diary.forEach(element => document.write(element));
+        this.diary.forEach(element => document.write(`${element} <br>` ));
     },
     this.addRecord = function (rec){
         this.diary.unshift(rec.toString())
     }
+    // this.search = function (){
+    //     let search = prompt("input expression or world") ;
+    //     let result = this.diary.filter(word => 
+    //         word.includes(search)?console.log(true):console.log("Try again"));
+    //     result.forEach(element => document.write(`${element} <br>` ));
+    // },
+    // this.weekend = function (){
+    //     let result = this.diary.filter(word => word.includes("Sat")?true:word.includes("Sun")?true: "You dont have weekend notes");
+    //     result.forEach(element => document.write(`${element} <br>` ));
+    // }
 }
 let diary = new Diary();
 function newNote(){
@@ -20,3 +30,5 @@ function newNote(){
     
     diary.addRecord(note);
 }
+
+
